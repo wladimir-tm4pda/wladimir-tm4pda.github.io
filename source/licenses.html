@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico" />
+<title>Licenses | Android Open Source</title>
+<link href="/assets/android-developer-docs-devguide.css" rel="stylesheet" type="text/css" />
+<!-- <link href="/assets-pdk/pdk-local.css" rel="stylesheet" type="text/css" /> -->
+<script src="/assets/search_autocomplete.js" type="text/javascript"></script>
+<script src="/assets/jquery-resizable.min.js" type="text/javascript"></script>
+<script src="/assets/android-developer-docs.js" type="text/javascript"></script>
+<script type="text/javascript">
+  setToRoot("/");
+</script>
+<script type="text/javascript">
+  function resizeDoxFrameHeight() {
+	if(document.getElementById && !(document.all)) {
+		height= document.getElementById('doxygen').contentDocument.body.scrollHeight + 20;
+		document.getElementById('doxygen').style.height = height+"pt";
+	}
+	else if(document.all) {
+		height= document.frames('doxygen').document.body.scrollHeight + 20;
+		document.all.doxygen.style.height = height;
+	}
+}
+</script>
+<script type="text/javascript">
+  jQuery(document).ready(function() {
+        jQuery("pre").addClass("prettyprint");
+  });
+</script>
+<noscript>
+  <style type="text/css">
+    body{overflow:auto;}
+    #body-content{position:relative; top:0;}
+    #doc-content{overflow:visible;border-left:3px solid #666;}
+    #side-nav{padding:0;}
+    #side-nav .toggle-list ul {display:block;}
+    #resize-packages-nav{border-bottom:3px solid #666;}
+  </style>
+</noscript>
+</head>
+
+<body class="gc-documentation" itemscope itemtype="http://schema.org/Article">
+
+  <div id="header">
+      <div id="headerLeft">
+          <a href="/" tabindex="-1"><img
+              src="/assets/images/open_source.png" alt="Android Open Source Project" /></a>
+          <ul class="source">
+              <li id="home-link"><a href="/index.html"><span>Home</span></a></li>
+              <li id="source-link"><a href="/source/index.html"
+                                  onClick="return loadLast('source')"><span>Source</span></a></li>
+              <li id="porting-link"><a href="/porting/index.html"
+                                  onClick="return loadLast('porting')"><span>Porting</span></a></li>
+              <li id="compatibility-link"><a href="/compatibility/index.html"
+                                  onClick="return loadLast('compatibility')"><span>Compatibility</span></a></li>
+              <li id="community-link"><a href="/community/index.html"
+                                  onClick="return loadLast('community')"><span>Community</span></a></li>
+              <li id="about-link"><a href="/about/index.html"
+                                  onClick="return loadLast('about')"><span>About</span></a></li>
+          </ul> 
+      </div>
+      <div id="headerRight">
+          <div id="headerLinks">
+            <!-- <img src="/assets/images/icon_world.jpg" alt="" /> -->
+            <span class="text">
+              <!-- &nbsp;<a href="#">English</a> | -->
+              <a href="http://www.android.com">Android.com</a>
+            </span>
+          </div>
+      </div><!-- headerRight -->
+  </div><!-- header -->
+
+  
+    
+      
+  <div class="g-section g-tpl-240" id="body-content">
+    <div class="g-unit g-first side-nav-resizable" id="side-nav">
+      <div id="devdoc-nav"><script type="text/javascript" language="JavaScript">
+<!--
+function nothing() {}
+-->
+</script>
+
+<ul>
+  <li><h2>The Project</h2><ul>
+    <li><a href="/source/roles.html">People and Roles</a></li>
+    <li><a href="/source/licenses.html">Licensing Information</a></li>
+    <li><a href="http://android.git.kernel.org/">Browse Source</a> <span style="font-size: 75%; font-variant: small-caps">[off-site]</span></li>
+    <li><a href="/source/overview.html">Platform Overview</a></li>
+    <li><a href="/source/life-of-a-bug.html">Life of a Bug</a></li>
+    <li><a href="/faqs.html#aosp">FAQs</a></li>
+  </ul>
+
+  <li><h2>Getting Started</h2><ul>
+    <li><a href="/source/download.html">Getting the Source</a></li>
+    <li><a href="/source/git-repo.html">Using git and repo</a></li>
+    <li><a href="/source/using-eclipse.html">Using Eclipse</a></li>
+    <li><a href="/source/code-style.html">Code Style</a></li>
+    <li><a href="/source/building-dream.html">Building for an ADP</a></li>
+  </ul>
+
+  <li><h2>Contributing</h2><ul>
+    <li><a href="/source/life-of-a-patch.html">Life of a Patch</a></li>
+    <li><a href="/source/submit-patches.html">Submitting Patches</a></li>
+    <li><a href="/source/report-bugs.html">Reporting Bugs</a></li>
+    <li><a href="/source/code-lines.html">Branches &amp; Releases</a></li>
+  </ul>
+</ul>
+
+<script type="text/javascript">
+<!--
+    buildToggleLists();
+//-->
+</script>
+
+
+      </div>
+    </div> <!-- end side-nav -->
+    <script>
+      addLoadEvent(function() {
+        scrollIntoView("devdoc-nav");
+        });
+    </script>
+  </div>
+
+    
+  
+
+
+
+
+<div class="g-unit" id="doc-content"><a name="top"></a>
+
+<div id="jd-header" class="guide-header">
+  <span class="crumb" itemprop="breadcrumb">
+    &nbsp;
+    
+  </span>
+<h1 itemprop="name">Licenses</h1>
+</div>
+
+  <div id="jd-content">
+
+    <div class="jd-descr" itemprop="articleBody">
+    <div>
+<p>The Android Open Source Project uses a few <a
+href="http://www.opensource.org/">open source initiative</a> approved open
+source licenses for our software.</p>
+<h2>Android Open Source Project license</h2>
+<p>The preferred license for the Android Open Source Project is the <a
+href="http://www.apache.org/licenses/LICENSE-2.0">Apache Software License,
+2.0</a> ("Apache 2.0"), and the majority of the Android software is licensed
+with Apache 2.0. While the project will strive to adhere to the preferred
+license, there may be exceptions which will be handled on a case-by-case
+basis. For example, the Linux kernel patches are under the GPLv2 license with
+system exceptions, which can be found on <a
+href="http://www.kernel.org/pub/linux/kernel/COPYING">kernel.org</a>.
+</p>
+<h2>Contributor License Grants</h2>
+<p>All <b>individual</b> contributors (that is, contributors making contributions
+only on their own behalf) of ideas, code, or documentation to the Android Open
+Source Project will be required to complete, sign, and submit an <a
+href="/source/cla-individual.html">Individual
+Contributor License Grant</a>. The grant can be executed online through the <a
+href="https://review.source.android.com/#settings,agreements">code review
+tool</a>. The grant clearly defines the terms under which intellectual
+property has been contributed to the Android Open Source Project. This license
+is for your protection as a contributor as well as the protection of the
+project; it does not change your rights to use your own contributions for any
+other purpose.</p>
+<p>For a <b>corporation</b> (or other entity) that has assigned employees to
+work on the Android Open Source Project, a <a
+href="/source/cla-corporate.html">Corporate
+Contributor License Grant</a> is available. This version of the grant allows a
+corporation to authorize contributions submitted by its designated employees
+and to grant copyright and patent licenses. Note that a Corporate Contributor
+License Grant does not remove the need for any developer to sign their own
+Individual Contributor License Grant as an individual, to cover any of their
+contributions which are <b><i>not</i></b> owned by the corporation signing the
+Corporate Contributor License Grant.
+</p>
+<p>Please note that we based our grants on the ones that the <a
+href="http://www.apache.org/">Apache Software Foundation</a> uses, which can
+be found on <a href="http://www.apache.org/licenses/">the Apache web site</a>.</p>
+<h2>Why Apache Software License?</h2>
+<p>We are sometimes asked why Apache Software License 2.0 is the preferred
+license for Android. For userspace (that is, non-kernel) software, we do in
+fact prefer ASL2.0 (and similar licenses like BSD, MIT, etc.) over other
+licenses such as LGPL.</p>
+<p>Android is about freedom and choice. The purpose of Android is promote
+openness in the mobile world, but we don't believe it's possible to predict or
+dictate all the uses to which people will want to put our software. So, while
+we encourage everyone to make devices that are open and modifiable, we don't
+believe it is our place to force them to do so. Using LGPL libraries would
+often force them to do so.</p>
+<p>Here are some of our specific concerns:</p>
+<ol>
+<li>LGPL (in simplified terms) requires either: shipping of source to the
+application; a written offer for source; or linking the LGPL-ed library
+dynamically and allowing users to manually upgrade or replace the library.
+Since Android software is typically shipped in the form of a static system
+image, complying with these requirements ends up restricting OEMs' designs.
+(For instance, it's difficult for a user to replace a library on read-only
+flash storage.)</li>
+<li>LGPL requires allowance of customer modification and reverse
+engineering for debugging those modifications.  Most device makers do
+not want to have to be bound by these terms, so to minimize the burden on
+these companies we minimize usage of LGPL software in userspace.</li>
+<li>Historically, LGPL libraries have been the source of a large number
+of compliance problems for downstream device makers and application
+developers. Educating engineers on these issues is difficult and slow-going,
+unfortunately. It's critical to Android's success that it be as easy as
+possible for device makers to comply with the licenses.  Given the
+difficulties with complying with LGPL in the past, it is most prudent to
+simply not use LGPL libraries if we can avoid it.</li>
+</ol>
+<p>The issues discussed above are our reasons for preferring ASL2.0 for
+our own code. They aren't criticisms of LGPL or other licenses. We do
+feel strongly on this topic, even to the point where we've gone out of our
+way to make sure as much code as possible is ASL2.0. However, we love all free
+and open source licenses, and respect others' opinions and preferences. We've
+simply decided that ASL2.0 is the right license for our goals.</p>
+</div>
+
+    </div>
+
+  <a href="#top" style="float:right">&uarr; Go to top</a>
+  
+  </div>
+
+<div id="footer">
+
+
+  <div id="copyright">
+    
+
+  </div>
+
+  <div id="footerlinks">
+    
+  <p>
+    <a href="http://www.android.com/terms.html">Site Terms of Service</a> -
+    <a href="http://www.android.com/privacy.html">Privacy Policy</a>
+  </p>
+  </div>
+
+</div> <!-- end footer -->
+
+</div><!-- end doc-content -->
+
+</div> <!-- end body-content --> 
+
+<script type="text/javascript">
+init(); /* initialize android-developer-docs.js */
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-5831155-1");
+pageTracker._trackPageview();
+</script>
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico" />
+<title>Philosophy and Goals | Android Open Source</title>
+<link href="/assets/android-developer-docs-devguide.css" rel="stylesheet" type="text/css" />
+<!-- <link href="/assets-pdk/pdk-local.css" rel="stylesheet" type="text/css" /> -->
+<script src="/assets/search_autocomplete.js" type="text/javascript"></script>
+<script src="/assets/jquery-resizable.min.js" type="text/javascript"></script>
+<script src="/assets/android-developer-docs.js" type="text/javascript"></script>
+<script type="text/javascript">
+  setToRoot("/");
+</script>
+<script type="text/javascript">
+  function resizeDoxFrameHeight() {
+	if(document.getElementById && !(document.all)) {
+		height= document.getElementById('doxygen').contentDocument.body.scrollHeight + 20;
+		document.getElementById('doxygen').style.height = height+"pt";
+	}
+	else if(document.all) {
+		height= document.frames('doxygen').document.body.scrollHeight + 20;
+		document.all.doxygen.style.height = height;
+	}
+}
+</script>
+<script type="text/javascript">
+  jQuery(document).ready(function() {
+        jQuery("pre").addClass("prettyprint");
+  });
+</script>
+<noscript>
+  <style type="text/css">
+    body{overflow:auto;}
+    #body-content{position:relative; top:0;}
+    #doc-content{overflow:visible;border-left:3px solid #666;}
+    #side-nav{padding:0;}
+    #side-nav .toggle-list ul {display:block;}
+    #resize-packages-nav{border-bottom:3px solid #666;}
+  </style>
+</noscript>
+</head>
+
+<body class="gc-documentation" itemscope itemtype="http://schema.org/Article">
+
+  <div id="header">
+      <div id="headerLeft">
+          <a href="/" tabindex="-1"><img
+              src="/assets/images/open_source.png" alt="Android Open Source Project" /></a>
+          <ul class="about">
+              <li id="home-link"><a href="/index.html"><span>Home</span></a></li>
+              <li id="source-link"><a href="/source/index.html"
+                                  onClick="return loadLast('source')"><span>Source</span></a></li>
+              <li id="porting-link"><a href="/porting/index.html"
+                                  onClick="return loadLast('porting')"><span>Porting</span></a></li>
+              <li id="compatibility-link"><a href="/compatibility/index.html"
+                                  onClick="return loadLast('compatibility')"><span>Compatibility</span></a></li>
+              <li id="community-link"><a href="/community/index.html"
+                                  onClick="return loadLast('community')"><span>Community</span></a></li>
+              <li id="about-link"><a href="/about/index.html"
+                                  onClick="return loadLast('about')"><span>About</span></a></li>
+          </ul> 
+      </div>
+      <div id="headerRight">
+          <div id="headerLinks">
+            <!-- <img src="/assets/images/icon_world.jpg" alt="" /> -->
+            <span class="text">
+              <!-- &nbsp;<a href="#">English</a> | -->
+              <a href="http://www.android.com">Android.com</a>
+            </span>
+          </div>
+      </div><!-- headerRight -->
+  </div><!-- header -->
+
+  
+
+
+
+
+<div class="g-unit" id="doc-content"><a name="top"></a>
+
+<div id="jd-header" class="guide-header">
+  <span class="crumb" itemprop="breadcrumb">
+    &nbsp;
+    
+  </span>
+<h1 itemprop="name">Philosophy and Goals</h1>
+</div>
+
+  <div id="jd-content">
+
+    <div class="jd-descr" itemprop="articleBody">
+    <p>Android is an open-source software stack for mobile phones and other
+devices.</p>
+<h2>Origin and Goal</h2>
+<p>Android was originated by a group of companies known as the Open Handset
+Alliance, led by Google. Today, many companies -- both original members of the
+OHA and others -- have invested heavily in Android, typically in the form of
+allocating significant engineering resources to improve Android and bring
+Android devices to Market.</p>
+<p>We created Android in response to our own experiences launching mobile
+apps. We wanted to make sure that there would always be an open platform
+available for carriers, OEMs, and developers to use to make their innovative
+ideas a reality. We wanted to make sure that there was no central point of
+failure, where one industry player could restrict or control the innovations
+of any other. The solution we chose was an open and open-source platform.</p>
+<p>The goal of the Android Open Source Project is to create a successful
+real-world product that improves the mobile experience for end users.</p>
+<h2>Governance Philosophy</h2>
+<p>The companies that have invested in Android have done so on its merits,
+because we believe that an open platform is necessary. Android is
+intentionally and explicitly an open-source -- as opposed to free software --
+effort: a group of organizations with shared needs has pooled
+resources to collaborate on a single implementation of a shared product. 
+The Android philosophy is pragmatic, first and foremost. The objective is
+a shared product that each contributor can tailor and customize.</p>
+<p>Uncontrolled customization can, of course, lead to incompatible
+implementations. To prevent this, the AOSP also maintains the Android
+Compatibility Program, which spells out what it means to be "Android
+compatible", and what is required of device builders to achieve that status.
+Anyone can (and will!) use the Android source code for any purpose, and we
+welcome all such uses. However, in order to take part in the shared
+ecosystem of applications that we are building around Android, device builders
+must participate in the Compatibility Program.</p>
+<p>Though Android consists of multiple sub-projects, this is strictly a
+project-management technique. We view and manage Android as a single,
+holistic software product, not a "distribution", specification, or collection
+of replaceable parts. Our intent is that device builders port
+Android to a device; they don't implement a specification or curate a
+distribution.</p>
+<h2>How We Work</h2>
+<p>We know that quality does not come without hard work. Along with many
+partners, Google has contributed full-time engineers, product managers, UI
+designers, Quality Assurance, and all the other roles required to bring
+modern devices to market.  We roll the open source administration and
+maintenance into the larger product development cycle.</p>
+<ul>
+<li>At any given moment, there is a current latest release of the Android
+platform. This typically takes the form of a branch in the tree.</li>
+<li>Device builders and Contributors work with the current
+latest release, fixing bugs, launching new devices, experimenting with new
+features, and so on.</li>
+<li>In parallel, Google works internally on the next version of the
+Android platform and framework, working according to the product's needs and
+goals. We develop the next version of Android by working with a device partner
+on a flagship device whose specifications are chosen to push Android
+in the direction we believe it should go.</li>
+<li>When the "n+1"th version is ready, it will be published to the public
+source tree, and become the new latest release.</li>
+</ul>
+
+    </div>
+
+  <a href="#top" style="float:right">&uarr; Go to top</a>
+  
+  </div>
+
+<div id="footer">
+
+
+  <div id="copyright">
+    
+
+  </div>
+
+  <div id="footerlinks">
+    
+  <p>
+    <a href="http://www.android.com/terms.html">Site Terms of Service</a> -
+    <a href="http://www.android.com/privacy.html">Privacy Policy</a>
+  </p>
+  </div>
+
+</div> <!-- end footer -->
+
+</div><!-- end doc-content -->
+
+</div> <!-- end body-content --> 
+
+<script type="text/javascript">
+init(); /* initialize android-developer-docs.js */
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-5831155-1");
+pageTracker._trackPageview();
+</script>
+
+</body>
+</html>
+
+
+

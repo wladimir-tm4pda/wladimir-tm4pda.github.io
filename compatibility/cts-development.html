@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico" />
+<title>CTS Development | Android Open Source</title>
+<link href="/assets/android-developer-docs-devguide.css" rel="stylesheet" type="text/css" />
+<!-- <link href="/assets-pdk/pdk-local.css" rel="stylesheet" type="text/css" /> -->
+<script src="/assets/search_autocomplete.js" type="text/javascript"></script>
+<script src="/assets/jquery-resizable.min.js" type="text/javascript"></script>
+<script src="/assets/android-developer-docs.js" type="text/javascript"></script>
+<script type="text/javascript">
+  setToRoot("/");
+</script>
+<script type="text/javascript">
+  function resizeDoxFrameHeight() {
+	if(document.getElementById && !(document.all)) {
+		height= document.getElementById('doxygen').contentDocument.body.scrollHeight + 20;
+		document.getElementById('doxygen').style.height = height+"pt";
+	}
+	else if(document.all) {
+		height= document.frames('doxygen').document.body.scrollHeight + 20;
+		document.all.doxygen.style.height = height;
+	}
+}
+</script>
+<script type="text/javascript">
+  jQuery(document).ready(function() {
+        jQuery("pre").addClass("prettyprint");
+  });
+</script>
+<noscript>
+  <style type="text/css">
+    body{overflow:auto;}
+    #body-content{position:relative; top:0;}
+    #doc-content{overflow:visible;border-left:3px solid #666;}
+    #side-nav{padding:0;}
+    #side-nav .toggle-list ul {display:block;}
+    #resize-packages-nav{border-bottom:3px solid #666;}
+  </style>
+</noscript>
+</head>
+
+<body class="gc-documentation" itemscope itemtype="http://schema.org/Article">
+
+  <div id="header">
+      <div id="headerLeft">
+          <a href="/" tabindex="-1"><img
+              src="/assets/images/open_source.png" alt="Android Open Source Project" /></a>
+          <ul class="compatibility">
+              <li id="home-link"><a href="/index.html"><span>Home</span></a></li>
+              <li id="source-link"><a href="/source/index.html"
+                                  onClick="return loadLast('source')"><span>Source</span></a></li>
+              <li id="porting-link"><a href="/porting/index.html"
+                                  onClick="return loadLast('porting')"><span>Porting</span></a></li>
+              <li id="compatibility-link"><a href="/compatibility/index.html"
+                                  onClick="return loadLast('compatibility')"><span>Compatibility</span></a></li>
+              <li id="community-link"><a href="/community/index.html"
+                                  onClick="return loadLast('community')"><span>Community</span></a></li>
+              <li id="about-link"><a href="/about/index.html"
+                                  onClick="return loadLast('about')"><span>About</span></a></li>
+          </ul> 
+      </div>
+      <div id="headerRight">
+          <div id="headerLinks">
+            <!-- <img src="/assets/images/icon_world.jpg" alt="" /> -->
+            <span class="text">
+              <!-- &nbsp;<a href="#">English</a> | -->
+              <a href="http://www.android.com">Android.com</a>
+            </span>
+          </div>
+      </div><!-- headerRight -->
+  </div><!-- header -->
+
+  
+    
+      
+  <div class="g-section g-tpl-240" id="body-content">
+    <div class="g-unit g-first side-nav-resizable" id="side-nav">
+      <div id="devdoc-nav"><script type="text/javascript" language="JavaScript">
+<!--
+function nothing() {}
+-->
+</script>
+
+<ul>
+  <li><h2>Getting Started</h2><ul>
+    <li><a href="/compatibility/overview.html">Compatibility Overview</a></li>
+    <li><a href="/compatibility/android-2.3.3-cdd.pdf">Current CDD</a></li>
+    <li><a href="/compatibility/cts-intro.html">CTS Introduction</a></li>
+    <li><a href="/compatibility/cts-development.html">CTS Development</a></li>
+  </ul></li>
+
+  <li><h2>More Information</h2><ul>
+    <li><a href="/compatibility/downloads.html">Downloads</a></li>
+    <li><a href="/faqs.html#compatibility">FAQs</a></li>
+    <li><a href="/compatibility/contact-us.html">Contact Us</a></li>
+  </ul></li>
+</ul>
+
+<script type="text/javascript">
+<!--
+    buildToggleLists();
+//-->
+</script>
+
+      </div>
+    </div> <!-- end side-nav -->
+    <script>
+      addLoadEvent(function() {
+        scrollIntoView("devdoc-nav");
+        });
+    </script>
+  </div>
+
+    
+  
+
+
+
+
+<div class="g-unit" id="doc-content"><a name="top"></a>
+
+<div id="jd-header" class="guide-header">
+  <span class="crumb" itemprop="breadcrumb">
+    &nbsp;
+    
+  </span>
+<h1 itemprop="name">CTS Development</h1>
+</div>
+
+  <div id="jd-content">
+
+    <div class="jd-descr" itemprop="articleBody">
+    <h3>Initializing Your Repo Client</h3>
+
+<p>Follow the
+<a href="/source/download.html">instructions</a>
+to get and build the Android source code but specify "-b froyo"
+when issuing the "repo init" command. This assures that your CTS
+changes will be included in the next CTS release and beyond.</p>
+
+<h3>Setting Up Eclipse</h3>
+
+<p>Follow the
+<a href="/source/using-eclipse.html">instructions</a>
+to setup Eclipse but execute the following command to generate the
+.classpath file rather than copying the one from the development
+project:</p>
+
+<pre>
+cd /path/to/android/root
+./cts/development/ide/eclipse/genclasspath.sh &gt; .classpath
+chmod u+w .classpath
+</pre>
+
+<p>This .classpath file will contain both the Android framework
+packages and the CTS packages.</p>
+
+<h3>Building and Running CTS</h3>
+
+<p>Execute the following commands to build CTS and start the interactive
+CTS console:</p>
+
+<pre>
+cd /path/to/android/root
+make cts
+cts
+</pre>
+
+<p>Provide arguments to CTS to immediately start executing a test:</p>
+
+<pre>
+cts start --plan CTS -p android.os.cts.BuildVersionTest
+</pre>
+
+<h3>Writing CTS Tests</h3>
+
+<p>CTS tests use JUnit and the Android testing APIs. Review the
+<a href="http://d.android.com/guide/topics/testing/testing_android.html">Testing
+and Instrumentation</a> tutorial while perusing the existing tests under the
+"cts/tests/tests" directory. You will see that CTS tests mostly follow the same
+conventions used in other Android tests.</p>
+
+<p>Since CTS runs across many production devices, the tests must follow
+these rules:</p>
+
+<ul>
+    <li>Must take into account varying screen sizes, orientations, and
+        keyboard layouts.</li>
+    <li>Only use public API methods. In other words, avoid all classes,
+        methods, and fields that are annotated with the "hide" annotation.</li>
+    <li>Avoid relying upon particular view layouts or depend on the
+        dimensions of assets that may not be on some device.</li>
+    <li>Don't rely upon root privileges.</li>
+</ul>
+
+<h4>Test Naming and Location</h4>
+
+<p>Most CTS test cases target a specific class in the Android API. These tests
+have Java package names with a "cts" suffix like "android.view.cts" and class
+names with the "Test" suffix like "ViewTest." Each test case consists of
+multiple tests, where each test usually exercises a particular API method of
+the API class being tested. Each test is annotated with a @TestTargetNew
+annotation to indicate what API method is being exercised. These tests are
+arranged in a directory structure where tests are grouped into different
+categories like "widgets" and "views."</p>
+
+<p>For example, the CTS test for "android.widget.TextView" is
+"android.widget.cts.TextVietTest" found under the
+"cts/tests/tests/widget/src/android/widget/cts" directory with its
+Java package name as "android.widget.cts" and its class name as
+"TextViewTest." The "TextViewTest" class has a test called "testSetText"
+that exercises the "setText" method and a test named "testSetSingleLine" that
+calls the "setSingleLine" method. Each of those tests have @TestTargetNew
+annotations indicating what they cover.</p>
+
+<p>Some CTS tests do not directly correspond to an API class but are placed in
+the most related package possible. For instance, the CTS test,
+"android.net.cts.ListeningPortsTest," is in the "android.net.cts," because it
+is network related even though there is no "android.net.ListeningPorts" class.
+Thus, use your best judgement when adding new tests and refer to other tests
+as examples.</p>
+
+<h4>New Test Packages</h4>
+
+<p>When adding new tests, there may not be an existing directory to place your
+test. In that case, refer to the example under "cts/tests/tests/example" and
+create a new directory. Furthermore, make sure to add your new package's
+module name from its Android.mk to "CTS_COVERAGE_TEST_CASE_LIST" in
+"cts/CtsTestCaseList.mk." This Makefile is used by "build/core/tasks/cts.mk"
+to glue all the tests together to create the final CTS package.</p>
+
+<h4>Test Stubs and Utilities</h4>
+
+<p>Some tests use additional infrastructure like separate activities
+and various utilities to perform tests. These are located under the
+"cts/tests/src" directory. These stubs aren't separated into separate test
+APKs like the tests, so the "cts/tests/src" directory does not have additional
+top level directories like "widget" or "view." Follow the same principle of
+putting new classes into a package with a name that correlates to the purpose
+of your new class. For instance, a stub activity used for testing OpenGL like
+"GLSurfaceViewStubActivity" belongs in the "android.opengl.cts" package under
+the "cts/tests/src/android/opengl" directory.</p>
+
+<h3>Other Tasks</h3>
+
+<p>Besides adding new tests there are other ways to contribute to CTS:</p>
+
+<ul>
+    <li>Fix or remove tests annotated with BrokenTest and KnownFailure.</li>
+</ul>
+
+<h3>Submitting Your Changes</h3>
+
+<p>Follow the 
+<a href="/source/submit-patches.html">Android
+contributors' workflow</a> to contribute changes to CTS. A reviewer
+will be assigned to your change, and your change should be reviewed shortly!</p>
+
+
+    </div>
+
+  <a href="#top" style="float:right">&uarr; Go to top</a>
+  
+  </div>
+
+<div id="footer">
+
+
+  <div id="copyright">
+    
+
+  </div>
+
+  <div id="footerlinks">
+    
+  <p>
+    <a href="http://www.android.com/terms.html">Site Terms of Service</a> -
+    <a href="http://www.android.com/privacy.html">Privacy Policy</a>
+  </p>
+  </div>
+
+</div> <!-- end footer -->
+
+</div><!-- end doc-content -->
+
+</div> <!-- end body-content --> 
+
+<script type="text/javascript">
+init(); /* initialize android-developer-docs.js */
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-5831155-1");
+pageTracker._trackPageview();
+</script>
+
+</body>
+</html>
+
+
+

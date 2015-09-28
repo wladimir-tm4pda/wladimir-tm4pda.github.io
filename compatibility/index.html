@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico" />
+<title>Android Compatibility | Android Open Source</title>
+<link href="/assets/android-developer-docs-devguide.css" rel="stylesheet" type="text/css" />
+<!-- <link href="/assets-pdk/pdk-local.css" rel="stylesheet" type="text/css" /> -->
+<script src="/assets/search_autocomplete.js" type="text/javascript"></script>
+<script src="/assets/jquery-resizable.min.js" type="text/javascript"></script>
+<script src="/assets/android-developer-docs.js" type="text/javascript"></script>
+<script type="text/javascript">
+  setToRoot("/");
+</script>
+<script type="text/javascript">
+  function resizeDoxFrameHeight() {
+	if(document.getElementById && !(document.all)) {
+		height= document.getElementById('doxygen').contentDocument.body.scrollHeight + 20;
+		document.getElementById('doxygen').style.height = height+"pt";
+	}
+	else if(document.all) {
+		height= document.frames('doxygen').document.body.scrollHeight + 20;
+		document.all.doxygen.style.height = height;
+	}
+}
+</script>
+<script type="text/javascript">
+  jQuery(document).ready(function() {
+        jQuery("pre").addClass("prettyprint");
+  });
+</script>
+<noscript>
+  <style type="text/css">
+    body{overflow:auto;}
+    #body-content{position:relative; top:0;}
+    #doc-content{overflow:visible;border-left:3px solid #666;}
+    #side-nav{padding:0;}
+    #side-nav .toggle-list ul {display:block;}
+    #resize-packages-nav{border-bottom:3px solid #666;}
+  </style>
+</noscript>
+</head>
+
+<body class="gc-documentation" itemscope itemtype="http://schema.org/Article">
+
+  <div id="header">
+      <div id="headerLeft">
+          <a href="/" tabindex="-1"><img
+              src="/assets/images/open_source.png" alt="Android Open Source Project" /></a>
+          <ul class="compatibility">
+              <li id="home-link"><a href="/index.html"><span>Home</span></a></li>
+              <li id="source-link"><a href="/source/index.html"
+                                  onClick="return loadLast('source')"><span>Source</span></a></li>
+              <li id="porting-link"><a href="/porting/index.html"
+                                  onClick="return loadLast('porting')"><span>Porting</span></a></li>
+              <li id="compatibility-link"><a href="/compatibility/index.html"
+                                  onClick="return loadLast('compatibility')"><span>Compatibility</span></a></li>
+              <li id="community-link"><a href="/community/index.html"
+                                  onClick="return loadLast('community')"><span>Community</span></a></li>
+              <li id="about-link"><a href="/about/index.html"
+                                  onClick="return loadLast('about')"><span>About</span></a></li>
+          </ul> 
+      </div>
+      <div id="headerRight">
+          <div id="headerLinks">
+            <!-- <img src="/assets/images/icon_world.jpg" alt="" /> -->
+            <span class="text">
+              <!-- &nbsp;<a href="#">English</a> | -->
+              <a href="http://www.android.com">Android.com</a>
+            </span>
+          </div>
+      </div><!-- headerRight -->
+  </div><!-- header -->
+
+  
+    
+      
+  <div class="g-section g-tpl-240" id="body-content">
+    <div class="g-unit g-first side-nav-resizable" id="side-nav">
+      <div id="devdoc-nav"><script type="text/javascript" language="JavaScript">
+<!--
+function nothing() {}
+-->
+</script>
+
+<ul>
+  <li><h2>Getting Started</h2><ul>
+    <li><a href="/compatibility/overview.html">Compatibility Overview</a></li>
+    <li><a href="/compatibility/android-2.3.3-cdd.pdf">Current CDD</a></li>
+    <li><a href="/compatibility/cts-intro.html">CTS Introduction</a></li>
+    <li><a href="/compatibility/cts-development.html">CTS Development</a></li>
+  </ul></li>
+
+  <li><h2>More Information</h2><ul>
+    <li><a href="/compatibility/downloads.html">Downloads</a></li>
+    <li><a href="/faqs.html#compatibility">FAQs</a></li>
+    <li><a href="/compatibility/contact-us.html">Contact Us</a></li>
+  </ul></li>
+</ul>
+
+<script type="text/javascript">
+<!--
+    buildToggleLists();
+//-->
+</script>
+
+      </div>
+    </div> <!-- end side-nav -->
+    <script>
+      addLoadEvent(function() {
+        scrollIntoView("devdoc-nav");
+        });
+    </script>
+  </div>
+
+    
+  
+
+
+
+
+<div class="g-unit" id="doc-content"><a name="top"></a>
+
+<div id="jd-header" class="guide-header">
+  <span class="crumb" itemprop="breadcrumb">
+    &nbsp;
+    
+  </span>
+<h1 itemprop="name">Android Compatibility</h1>
+</div>
+
+  <div id="jd-content">
+
+    <div class="jd-descr" itemprop="articleBody">
+    <p>Android's purpose is to establish an open platform for developers to build
+innovative mobile apps. Three key components work together to realize this
+platform.</p>
+<p>The Android Compatibility Program defines the technical details of Android
+platform and provides tools used by OEMs to ensure that developers’ apps run
+on a variety of devices. The Android SDK provides built-in tools that
+Developers use to clearly state the device features their apps require. And
+Android Market shows apps only to those devices that can properly run
+them.</p>
+<p>These pages describe the Android Compatibility Program and how to get
+access to compatibility information and tools. The latest version of the
+Android source code and compatibility program is 2.3, which 
+corresponded to the Gingerbread branch.</p>
+
+
+<h2>Why build compatible Android devices?</h2>
+<h3>Users want a customizable device.</h3>
+<p>A mobile phone is a highly personal, always-on, always-present gateway to
+the Internet. We haven't met a user yet who didn't want to customize it by
+extending its functionality. That's why Android was designed as a robust
+platform for running after-market applications.</p>
+
+<h3>Developers outnumber us all.</h3>
+<p>No device manufacturer can hope to write all the software that a person could
+conceivably need. We need third-party developers to write the apps users want,
+so the Android Open Source Project aims to make it as easy and open as
+possible for developers to build apps.</p>
+
+<h3>Everyone needs a common ecosystem.</h3>
+<p>Every line of code developers write to work around a particular phone's bug
+is a line of code that didn't add a new feature. The more compatible phones
+there are, the more apps there will be. By building a fully compatible Android
+device, you benefit from the huge pool of apps written for Android, while
+increasing the incentive for developers to build more of those apps.</p>
+
+
+<h2>Android compatibility is free, and it's easy.</h2>
+<p>If you are building a mobile device, you can follow these steps to make
+sure your device is compatible with Android. For more details about the
+Android compatibility program in general, see <a
+href="/compatibility/overview.html">the program overview</a>.</p>
+<p>Building a compatible device is a three-step process:</p>
+<ol>
+  <li><b>Obtain the Android software source code</b><p>This is the
+  <a href="/source/index.html">source code for the Android
+  platform</a>, that you port to your hardware.</p></li>
+  <li><b>Comply with Android Compatibility Definition Document (CDD)</b><p>
+  The CDD enumerates the software and hardware requirements of
+  a compatible Android device.</p></li>
+  <li><b>Pass the Compatibility Test Suite (CTS)</b><p>You can use the CTS
+  (included in the Android source code) as an ongoing aid to compatibility
+  during the development process.</p></li>
+</ol>
+
+<h2>Joining the Ecosystem</h2>
+<p>Once you've built a compatible device, you may wish to include Android
+Market to provide your users access to the third-party app ecosystem.
+Unfortunately, for a variety of legal and business reasons, we aren't able to
+automatically license Android Market to all compatible devices. To inquire
+about access about Android Market, you can <a
+href="/compatibility/contact-us.html">contact us</a></p>
+
+    </div>
+
+  <a href="#top" style="float:right">&uarr; Go to top</a>
+  
+  </div>
+
+<div id="footer">
+
+
+  <div id="copyright">
+    
+
+  </div>
+
+  <div id="footerlinks">
+    
+  <p>
+    <a href="http://www.android.com/terms.html">Site Terms of Service</a> -
+    <a href="http://www.android.com/privacy.html">Privacy Policy</a>
+  </p>
+  </div>
+
+</div> <!-- end footer -->
+
+</div><!-- end doc-content -->
+
+</div> <!-- end body-content --> 
+
+<script type="text/javascript">
+init(); /* initialize android-developer-docs.js */
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-5831155-1");
+pageTracker._trackPageview();
+</script>
+
+</body>
+</html>
+
+
+

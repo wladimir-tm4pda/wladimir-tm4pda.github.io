@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico" />
+<title>Compatibility Test Suite | Android Open Source</title>
+<link href="/assets/android-developer-docs-devguide.css" rel="stylesheet" type="text/css" />
+<!-- <link href="/assets-pdk/pdk-local.css" rel="stylesheet" type="text/css" /> -->
+<script src="/assets/search_autocomplete.js" type="text/javascript"></script>
+<script src="/assets/jquery-resizable.min.js" type="text/javascript"></script>
+<script src="/assets/android-developer-docs.js" type="text/javascript"></script>
+<script type="text/javascript">
+  setToRoot("/");
+</script>
+<script type="text/javascript">
+  function resizeDoxFrameHeight() {
+	if(document.getElementById && !(document.all)) {
+		height= document.getElementById('doxygen').contentDocument.body.scrollHeight + 20;
+		document.getElementById('doxygen').style.height = height+"pt";
+	}
+	else if(document.all) {
+		height= document.frames('doxygen').document.body.scrollHeight + 20;
+		document.all.doxygen.style.height = height;
+	}
+}
+</script>
+<script type="text/javascript">
+  jQuery(document).ready(function() {
+        jQuery("pre").addClass("prettyprint");
+  });
+</script>
+<noscript>
+  <style type="text/css">
+    body{overflow:auto;}
+    #body-content{position:relative; top:0;}
+    #doc-content{overflow:visible;border-left:3px solid #666;}
+    #side-nav{padding:0;}
+    #side-nav .toggle-list ul {display:block;}
+    #resize-packages-nav{border-bottom:3px solid #666;}
+  </style>
+</noscript>
+</head>
+
+<body class="gc-documentation" itemscope itemtype="http://schema.org/Article">
+
+  <div id="header">
+      <div id="headerLeft">
+          <a href="/" tabindex="-1"><img
+              src="/assets/images/open_source.png" alt="Android Open Source Project" /></a>
+          <ul class="compatibility">
+              <li id="home-link"><a href="/index.html"><span>Home</span></a></li>
+              <li id="source-link"><a href="/source/index.html"
+                                  onClick="return loadLast('source')"><span>Source</span></a></li>
+              <li id="porting-link"><a href="/porting/index.html"
+                                  onClick="return loadLast('porting')"><span>Porting</span></a></li>
+              <li id="compatibility-link"><a href="/compatibility/index.html"
+                                  onClick="return loadLast('compatibility')"><span>Compatibility</span></a></li>
+              <li id="community-link"><a href="/community/index.html"
+                                  onClick="return loadLast('community')"><span>Community</span></a></li>
+              <li id="about-link"><a href="/about/index.html"
+                                  onClick="return loadLast('about')"><span>About</span></a></li>
+          </ul> 
+      </div>
+      <div id="headerRight">
+          <div id="headerLinks">
+            <!-- <img src="/assets/images/icon_world.jpg" alt="" /> -->
+            <span class="text">
+              <!-- &nbsp;<a href="#">English</a> | -->
+              <a href="http://www.android.com">Android.com</a>
+            </span>
+          </div>
+      </div><!-- headerRight -->
+  </div><!-- header -->
+
+  
+    
+      
+  <div class="g-section g-tpl-240" id="body-content">
+    <div class="g-unit g-first side-nav-resizable" id="side-nav">
+      <div id="devdoc-nav"><script type="text/javascript" language="JavaScript">
+<!--
+function nothing() {}
+-->
+</script>
+
+<ul>
+  <li><h2>Getting Started</h2><ul>
+    <li><a href="/compatibility/overview.html">Compatibility Overview</a></li>
+    <li><a href="/compatibility/android-2.3.3-cdd.pdf">Current CDD</a></li>
+    <li><a href="/compatibility/cts-intro.html">CTS Introduction</a></li>
+    <li><a href="/compatibility/cts-development.html">CTS Development</a></li>
+  </ul></li>
+
+  <li><h2>More Information</h2><ul>
+    <li><a href="/compatibility/downloads.html">Downloads</a></li>
+    <li><a href="/faqs.html#compatibility">FAQs</a></li>
+    <li><a href="/compatibility/contact-us.html">Contact Us</a></li>
+  </ul></li>
+</ul>
+
+<script type="text/javascript">
+<!--
+    buildToggleLists();
+//-->
+</script>
+
+      </div>
+    </div> <!-- end side-nav -->
+    <script>
+      addLoadEvent(function() {
+        scrollIntoView("devdoc-nav");
+        });
+    </script>
+  </div>
+
+    
+  
+
+
+
+
+<div class="g-unit" id="doc-content"><a name="top"></a>
+
+<div id="jd-header" class="guide-header">
+  <span class="crumb" itemprop="breadcrumb">
+    &nbsp;
+    
+  </span>
+<h1 itemprop="name">Compatibility Test Suite</h1>
+</div>
+
+  <div id="jd-content">
+
+    <div class="jd-descr" itemprop="articleBody">
+    <h3>How does the CTS work?</h3>
+<div><img src="/images/cts-0.png"></div>
+<div>The CTS is an automated testing harness that includes two major software components:</div>
+<ul>
+<li>The CTS test harness runs on your desktop machine and manages test execution.</li>
+<li>Individual test cases are executed on attached mobile devices or on an
+emulator. The test cases are written in Java as JUnit tests and packaged as
+Android .apk files to run on the actual device target.</li>
+</ul>
+
+<h3>Workflow</h3>
+<ol>
+<li><a href="/compatibility/downloads.html">Download</a> the CTS.
+<li>Attach at least one device (or emulator) to your machine.</li>
+<li>For CTS 2.1 R2 and beyond, setup your device (or emulator) to run the accessibility tests:
+    <ol>
+        <li>adb install -r android-cts/repository/testcases/CtsDelegatingAccessibilityService.apk</li>
+        <li>On the device, enable Settings &gt; Accessibility &gt; Accessibility &gt; Delegating Accessibility Service</li>
+    </ol>
+</li>
+<li>Launch the CTS. The CTS test harness loads the test plan onto the attached devices. For each test in the test harness:
+    <ul>
+    <li>The test harness pushes a .apk file to each device, executes the test through instrumentation, and records test results.</li>
+    <li>The test harness removes the .apk file from each device.</li>
+    </ul>
+</li>
+<li>Once all the tests are executed, you can view the test results in your browser and use the results to adjust your design. You can continue to run the CTS throughout your development process.</li>
+</ol>
+<div>When you are ready, you can submit the report generated by the CTS to cts@android.com. The report is a .zip archived file that contains XML results and supplemental information such as screen captures.</div>
+
+<h3>Types of test cases</h3>
+The CTS includes the following types of test cases:
+<ul>
+<li><i>Unit tests</i> test atomic units of code within the Android platform; e.g. a single class, such as java.util.HashMap.</li>
+<li><i>Functional tests</i> test a combination of APIs together in a higher-level use-case.</li>
+<li><i>Reference application tests</i> instrument a complete sample application to exercise a full set of APIs and Android runtime services</li>
+</ul>
+<div>Future versions of the CTS will include the following types of test cases:</div>
+<ul>
+<li><i>Robustness tests</i> test the durability of the system under stress.</li>
+<li><i>Performance tests</i> test the performance of the system against defined benchmarks, for example rendering frames per second.</li>
+</ul>
+
+<h3>Areas Covered</h3>
+The unit test cases cover the following areas to ensure compatibility <br>
+<table><tbody>
+<tr><td>Area</td><td>Description <br></td></tr>
+<tr><td>Signature tests</td>
+<td>For each Android release, there are XML files describing the signatures of all public APIs contained in the release. The CTS contains a utility to check those API signatures against the APIs available on the device. The results from signature checking are recorded in the test result XML file.
+</td>
+</tr>
+<tr><td>Platform API Tests</td>
+<td>Test the platform (core libraries and Android Application Framework) APIs as documented in the SDK <a href="http://code.google.com/android/reference/classes.html">Class Index</a>
+to ensure API correctness:
+<ul>
+<li>correct class, attribute and method signatures</li>
+<li>correct method behavior</li>
+<li>negative tests to ensure expected behavior for incorrect parameter handling</li>
+</ul>
+</td></tr>
+<tr><td>Dalvik VM Tests</td><td>The tests focus on testing the Dalvik VM</td></tr>
+<tr><td>Platform Data Model</td>
+<td>The CTS tests the core platform data model as exposed to application developers through content providers, as documented in the SDK <a href="http://code.google.com/android/reference/android/provider/package-summary.html">android.provider</a>
+package:
+<ul>
+<li>contacts</li>
+<li>browser</li>
+<li>settings</li>
+<li>more...</li>
+</ul>
+</td></tr>
+<tr><td>Platform Intents</td>
+<td>The CTS tests the core platform intents, as documented in the SDK <a href="http://code.google.com/android/reference/available-intents.html">Available Intents</a>.</td>
+</tr>
+<tr><td>Platform Permissions</td>
+<td>The CTS tests the core platform permissions, as documented in the SDK <a href="http://code.google.com/android/reference/android/Manifest.permission.html">Available Permissions</a>.</td>
+</tr>
+<tr><td>Platform Resources <br></td>
+<td>The CTS tests for correct handling of the core platform resource types, as documented in the SDK <a href="http://code.google.com/android/reference/available-resources.html">Available Resource Types</a>
+. This includes tests for:
+<ul>
+<li>simple values</li>
+<li>drawables</li>
+<li>nine-patch</li>
+<li>animations</li>
+<li>layouts</li>
+<li>styles and themes</li>
+<li>loading alternate resources</li>
+</ul></td></tr>
+</tbody></table>
+
+    </div>
+
+  <a href="#top" style="float:right">&uarr; Go to top</a>
+  
+  </div>
+
+<div id="footer">
+
+
+  <div id="copyright">
+    
+
+  </div>
+
+  <div id="footerlinks">
+    
+  <p>
+    <a href="http://www.android.com/terms.html">Site Terms of Service</a> -
+    <a href="http://www.android.com/privacy.html">Privacy Policy</a>
+  </p>
+  </div>
+
+</div> <!-- end footer -->
+
+</div><!-- end doc-content -->
+
+</div> <!-- end body-content --> 
+
+<script type="text/javascript">
+init(); /* initialize android-developer-docs.js */
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-5831155-1");
+pageTracker._trackPageview();
+</script>
+
+</body>
+</html>
+
+
+

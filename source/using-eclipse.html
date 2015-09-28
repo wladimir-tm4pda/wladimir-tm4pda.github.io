@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico" />
+<title>Using Eclipse | Android Open Source</title>
+<link href="/assets/android-developer-docs-devguide.css" rel="stylesheet" type="text/css" />
+<!-- <link href="/assets-pdk/pdk-local.css" rel="stylesheet" type="text/css" /> -->
+<script src="/assets/search_autocomplete.js" type="text/javascript"></script>
+<script src="/assets/jquery-resizable.min.js" type="text/javascript"></script>
+<script src="/assets/android-developer-docs.js" type="text/javascript"></script>
+<script type="text/javascript">
+  setToRoot("/");
+</script>
+<script type="text/javascript">
+  function resizeDoxFrameHeight() {
+	if(document.getElementById && !(document.all)) {
+		height= document.getElementById('doxygen').contentDocument.body.scrollHeight + 20;
+		document.getElementById('doxygen').style.height = height+"pt";
+	}
+	else if(document.all) {
+		height= document.frames('doxygen').document.body.scrollHeight + 20;
+		document.all.doxygen.style.height = height;
+	}
+}
+</script>
+<script type="text/javascript">
+  jQuery(document).ready(function() {
+        jQuery("pre").addClass("prettyprint");
+  });
+</script>
+<noscript>
+  <style type="text/css">
+    body{overflow:auto;}
+    #body-content{position:relative; top:0;}
+    #doc-content{overflow:visible;border-left:3px solid #666;}
+    #side-nav{padding:0;}
+    #side-nav .toggle-list ul {display:block;}
+    #resize-packages-nav{border-bottom:3px solid #666;}
+  </style>
+</noscript>
+</head>
+
+<body class="gc-documentation" itemscope itemtype="http://schema.org/Article">
+
+  <div id="header">
+      <div id="headerLeft">
+          <a href="/" tabindex="-1"><img
+              src="/assets/images/open_source.png" alt="Android Open Source Project" /></a>
+          <ul class="source">
+              <li id="home-link"><a href="/index.html"><span>Home</span></a></li>
+              <li id="source-link"><a href="/source/index.html"
+                                  onClick="return loadLast('source')"><span>Source</span></a></li>
+              <li id="porting-link"><a href="/porting/index.html"
+                                  onClick="return loadLast('porting')"><span>Porting</span></a></li>
+              <li id="compatibility-link"><a href="/compatibility/index.html"
+                                  onClick="return loadLast('compatibility')"><span>Compatibility</span></a></li>
+              <li id="community-link"><a href="/community/index.html"
+                                  onClick="return loadLast('community')"><span>Community</span></a></li>
+              <li id="about-link"><a href="/about/index.html"
+                                  onClick="return loadLast('about')"><span>About</span></a></li>
+          </ul> 
+      </div>
+      <div id="headerRight">
+          <div id="headerLinks">
+            <!-- <img src="/assets/images/icon_world.jpg" alt="" /> -->
+            <span class="text">
+              <!-- &nbsp;<a href="#">English</a> | -->
+              <a href="http://www.android.com">Android.com</a>
+            </span>
+          </div>
+      </div><!-- headerRight -->
+  </div><!-- header -->
+
+  
+    
+      
+  <div class="g-section g-tpl-240" id="body-content">
+    <div class="g-unit g-first side-nav-resizable" id="side-nav">
+      <div id="devdoc-nav"><script type="text/javascript" language="JavaScript">
+<!--
+function nothing() {}
+-->
+</script>
+
+<ul>
+  <li><h2>The Project</h2><ul>
+    <li><a href="/source/roles.html">People and Roles</a></li>
+    <li><a href="/source/licenses.html">Licensing Information</a></li>
+    <li><a href="http://android.git.kernel.org/">Browse Source</a> <span style="font-size: 75%; font-variant: small-caps">[off-site]</span></li>
+    <li><a href="/source/overview.html">Platform Overview</a></li>
+    <li><a href="/source/life-of-a-bug.html">Life of a Bug</a></li>
+    <li><a href="/faqs.html#aosp">FAQs</a></li>
+  </ul>
+
+  <li><h2>Getting Started</h2><ul>
+    <li><a href="/source/download.html">Getting the Source</a></li>
+    <li><a href="/source/git-repo.html">Using git and repo</a></li>
+    <li><a href="/source/using-eclipse.html">Using Eclipse</a></li>
+    <li><a href="/source/code-style.html">Code Style</a></li>
+    <li><a href="/source/building-dream.html">Building for an ADP</a></li>
+  </ul>
+
+  <li><h2>Contributing</h2><ul>
+    <li><a href="/source/life-of-a-patch.html">Life of a Patch</a></li>
+    <li><a href="/source/submit-patches.html">Submitting Patches</a></li>
+    <li><a href="/source/report-bugs.html">Reporting Bugs</a></li>
+    <li><a href="/source/code-lines.html">Branches &amp; Releases</a></li>
+  </ul>
+</ul>
+
+<script type="text/javascript">
+<!--
+    buildToggleLists();
+//-->
+</script>
+
+
+      </div>
+    </div> <!-- end side-nav -->
+    <script>
+      addLoadEvent(function() {
+        scrollIntoView("devdoc-nav");
+        });
+    </script>
+  </div>
+
+    
+  
+
+
+
+
+<div class="g-unit" id="doc-content"><a name="top"></a>
+
+<div id="jd-header" class="guide-header">
+  <span class="crumb" itemprop="breadcrumb">
+    &nbsp;
+    
+  </span>
+<h1 itemprop="name">Using Eclipse</h1>
+</div>
+
+  <div id="jd-content">
+
+    <div class="jd-descr" itemprop="articleBody">
+    <div>
+<p>This document will help you set up the Eclipse IDE for Android platform development.</p>
+<p><i>Note: if you are looking for information on how to use
+Eclipse to develop applications that run on Android, this is not the right
+page for you. You probably would find <a
+href="http://developer.android.com/sdk/eclipse-adt.html">the Eclipse page on
+developer.android.com</a> more useful.</i></p>
+<h2><a>Enter eclipse</a>
+</h2>
+<h4>
+Basic setup
+</h4>
+<p>First, it's important to make sure the regular Android development system is set up.
+</p>
+<pre>cd /path/to/android/root <br>make     # and wait a while, if you haven't done this <br></pre>
+<p><b>Important</b>
+: You will still be using "make" to build the files you will actually run (in the emulator or on a device). You will be using Eclipse to edit files and verify that they compile, but when you want to run something you will need to make sure files are saved in Eclipse and run "make" in a shell. The Eclipse build is just for error checking.
+</p>
+<p>Eclipse needs a list of directories to search for Java files. This is called the "Java Build Path" and can be set with the .classpath file. We have a sample version to start you off.
+</p>
+<pre>cd /path/to/android/root <br>cp development/ide/eclipse/.classpath .<br>chmod u+w .classpath  # Make the copy writable <br></pre>
+<p>Now edit that copy of .classpath, if necessary.
+</p>
+<h5>
+Increase Eclipse's Memory Settings
+</h5>
+<p>The Android project is large enough that Eclipse's Java VM sometimes runs out of memory while compiling it. Avoid this problem by editing the the eclipse.ini file. On Apple OSX the eclipse.ini file is located at /Applications/eclipse/Eclipse.app/Contents/MacOS/eclipse.ini
+</p>
+<p>Memory-related defaults (as of Eclipse 3.4)
+</p>
+
+<pre>-Xms40m <br>-Xmx256m <br>-XX:MaxPermSize=256m <br></pre>
+<p>Recommended settings for Android development
+</p>
+<pre>-Xms128m <br>-Xmx512m <br>-XX:MaxPermSize=256m <br></pre>
+<p>These settings set Eclipse's minimum Java heap size to 128MB, set the maximum Java heap size to 512MB, and keep the maximum permanent generation size at the default of 256MB.
+</p>
+<p>Now start Eclipse:
+</p>
+<pre>eclipse  # or you can click some clicky thing instead, if you prefer <br></pre>
+<p>Now create a project for Android development:
+</p>
+<ol><li>If Eclipse asks you for a workspace location, choose the default.
+</li>
+<li>If you have a "Welcome" screen, close it to reveal the Java perspective.
+</li>
+<li>File New Java Project
+</li>
+<li>Pick a project name, "android" or anything you like.
+</li>
+<li>Select "Create project from existing source", enter the path to your Android root directory, and click Finish.
+</li>
+<li>Wait while it sets up the project. (You'll see a subtle progress meter in the lower right corner.)
+</li>
+</ol>
+<p>Once the project workspace is created, Eclipse should start building. In theory, it should build with no errors and you should be set to go. If necessary, uncheck and re-check Project Build Automatically to force a rebuild.
+</p>
+<p><i><b>Note:</b>
+</i>
+Eclipse sometimes likes to add an "import android.R" statement at the top of your files that use resources, especially when you ask eclipse to sort or otherwise manage imports. This will cause your make to break. Look out for these erroneous import statements and delete them.
+</p>
+<h4>
+When you sync
+</h4>
+<p>Every time you repo sync, or otherwise change files outside of Eclipse (especially the .classpath), you need to refresh Eclipse's view of things:
+</p>
+<ol><li>Window Show View Navigator
+</li>
+<li>In the "Navigator", right-click on the project ("android-java" or whatever you named it)
+</li>
+<li>Click Refresh in the context menu
+</li>
+</ol>
+<h4>
+Adding apps to the build path
+</h4>
+<p>The default .classpath includes the source to the core system and a sample set of apps, but might not include the particular app you may want to work on. To add an app, you must add the app's source directory. To do this inside Eclipse:
+</p>
+<ol><li>Project Properties
+</li>
+<li>Select "Java Build Path" from the left-hand menu.
+</li>
+<li>Choose the "Source" tab.
+</li>
+<li>Click "Add Folder...".
+</li>
+<li>Add your app's "src" directory.
+</li>
+<li>Click OK.
+</li>
+</ol>
+<p>When you're done, the "source folder" path in the list should look like android/packages/apps/<i>YourAppName</i>
+/src. Depending on which app(s) you include, you may also need to include othersrc/main/java directories under android/dalvik/libcore. Do this if you find you cannot build with the default set.
+</p>
+<h2><a>Eclipse formatting</a>
+</h2>
+<p>You can import files in development/ide/eclipse to make Eclipse
+follow the Android style rules.  Select
+"Window &rsaquo; Preferences &rsaquo; Java &rsaquo; Code Style".
+Use "Formatter &rsaquo; Import" to import android-formatting.xml
+and "Organize Imports &rsaquo; Import" to import android.importorder.
+</p>
+<h2><a>Debugging the emulator with Eclipse</a>
+</h2>
+<p>You can also use eclipse to debug the emulator and step through code. First, start the emulator running:
+</p>
+<pre>cd /path/to/android/root <br>. build/envsetup.sh <br>lunch 1   # to build the emulator <br>make      # if you didn't already do this <br>emulator  # you should see a GUI picture of a phone <br></pre>
+<p>In another shell, start DDMS (the Dalvik debug manager):
+</p>
+<pre>cd /path/to/android/root <br>ddms      # you should get a splufty debugging console <br></pre>
+<p>Now, in eclipse, you can attach to the emulator:
+</p>
+<ol><li>Run Open Debug Dialog...
+</li>
+<li>Right-click "Remote Java Application", select "New".
+</li>
+<li>Pick a name, "android-debug" or anything you like.
+</li>
+<li>Set the "Project" to your project ("android-java" or whatever).
+</li>
+<li>Keep the "Host" set to "localhost", but change "Port" to 8700.
+</li>
+<li>Click the "Debug" button and you should be all set.
+</li>
+</ol>
+<p>Note that port 8700 is attached to whatever process is currently selected in the DDMS console, so you need to sure that DDMS has selected the process you want to debug.
+</p>
+<p>You may need to open the Debug perspective (next to the "Java" perspective icon in the upper-right, click the small "Open Perspective" icon and select "Debug"). Once you do, you should see a list of threads; if you select one and break it (by clicking the "pause" icon), it should show the stack trace, source file, and line where execution is at. Breakpoints and whatnot should all work.
+</p>
+<h2><a>Bonus material</a>
+</h2>
+<p>Replace Ctrl with the Apple key on Mac.
+</p>
+
+<pre>Ctrl-Shift-o = Organize imports <br>Ctrl-Shift-t = load class by name <br>Ctrl-Shift-r = load non-class resource by name <br>Ctrl-1 = quick fix <br>Ctrl-e = Recently viewed files <br>Ctrl-space = auto complete <br>Shift-Alt-r = refactor:rename <br>Shift-Alt-v = refactor:move <br></pre>
+
+<h2><a>"Eclipse is not working correctly, what should I do?"</a>
+</h2>
+<p>Make sure:
+</p>
+<ul><li>You followed the instructions on this page precisely.
+</li>
+<li>Your Problems view doesn't show any errors.
+</li>
+<li>Your application respects the package/directory structure.
+</li>
+</ul>
+<p>If you're still having problems, please contact one of the Android mailing lists or IRC channels.
+</p>
+</div>
+
+    </div>
+
+  <a href="#top" style="float:right">&uarr; Go to top</a>
+  
+  </div>
+
+<div id="footer">
+
+
+  <div id="copyright">
+    
+
+  </div>
+
+  <div id="footerlinks">
+    
+  <p>
+    <a href="http://www.android.com/terms.html">Site Terms of Service</a> -
+    <a href="http://www.android.com/privacy.html">Privacy Policy</a>
+  </p>
+  </div>
+
+</div> <!-- end footer -->
+
+</div><!-- end doc-content -->
+
+</div> <!-- end body-content --> 
+
+<script type="text/javascript">
+init(); /* initialize android-developer-docs.js */
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-5831155-1");
+pageTracker._trackPageview();
+</script>
+
+</body>
+</html>
+
+
+

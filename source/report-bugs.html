@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico" />
+<title>Report Bugs | Android Open Source</title>
+<link href="/assets/android-developer-docs-devguide.css" rel="stylesheet" type="text/css" />
+<!-- <link href="/assets-pdk/pdk-local.css" rel="stylesheet" type="text/css" /> -->
+<script src="/assets/search_autocomplete.js" type="text/javascript"></script>
+<script src="/assets/jquery-resizable.min.js" type="text/javascript"></script>
+<script src="/assets/android-developer-docs.js" type="text/javascript"></script>
+<script type="text/javascript">
+  setToRoot("/");
+</script>
+<script type="text/javascript">
+  function resizeDoxFrameHeight() {
+	if(document.getElementById && !(document.all)) {
+		height= document.getElementById('doxygen').contentDocument.body.scrollHeight + 20;
+		document.getElementById('doxygen').style.height = height+"pt";
+	}
+	else if(document.all) {
+		height= document.frames('doxygen').document.body.scrollHeight + 20;
+		document.all.doxygen.style.height = height;
+	}
+}
+</script>
+<script type="text/javascript">
+  jQuery(document).ready(function() {
+        jQuery("pre").addClass("prettyprint");
+  });
+</script>
+<noscript>
+  <style type="text/css">
+    body{overflow:auto;}
+    #body-content{position:relative; top:0;}
+    #doc-content{overflow:visible;border-left:3px solid #666;}
+    #side-nav{padding:0;}
+    #side-nav .toggle-list ul {display:block;}
+    #resize-packages-nav{border-bottom:3px solid #666;}
+  </style>
+</noscript>
+</head>
+
+<body class="gc-documentation" itemscope itemtype="http://schema.org/Article">
+
+  <div id="header">
+      <div id="headerLeft">
+          <a href="/" tabindex="-1"><img
+              src="/assets/images/open_source.png" alt="Android Open Source Project" /></a>
+          <ul class="source">
+              <li id="home-link"><a href="/index.html"><span>Home</span></a></li>
+              <li id="source-link"><a href="/source/index.html"
+                                  onClick="return loadLast('source')"><span>Source</span></a></li>
+              <li id="porting-link"><a href="/porting/index.html"
+                                  onClick="return loadLast('porting')"><span>Porting</span></a></li>
+              <li id="compatibility-link"><a href="/compatibility/index.html"
+                                  onClick="return loadLast('compatibility')"><span>Compatibility</span></a></li>
+              <li id="community-link"><a href="/community/index.html"
+                                  onClick="return loadLast('community')"><span>Community</span></a></li>
+              <li id="about-link"><a href="/about/index.html"
+                                  onClick="return loadLast('about')"><span>About</span></a></li>
+          </ul> 
+      </div>
+      <div id="headerRight">
+          <div id="headerLinks">
+            <!-- <img src="/assets/images/icon_world.jpg" alt="" /> -->
+            <span class="text">
+              <!-- &nbsp;<a href="#">English</a> | -->
+              <a href="http://www.android.com">Android.com</a>
+            </span>
+          </div>
+      </div><!-- headerRight -->
+  </div><!-- header -->
+
+  
+    
+      
+  <div class="g-section g-tpl-240" id="body-content">
+    <div class="g-unit g-first side-nav-resizable" id="side-nav">
+      <div id="devdoc-nav"><script type="text/javascript" language="JavaScript">
+<!--
+function nothing() {}
+-->
+</script>
+
+<ul>
+  <li><h2>The Project</h2><ul>
+    <li><a href="/source/roles.html">People and Roles</a></li>
+    <li><a href="/source/licenses.html">Licensing Information</a></li>
+    <li><a href="http://android.git.kernel.org/">Browse Source</a> <span style="font-size: 75%; font-variant: small-caps">[off-site]</span></li>
+    <li><a href="/source/overview.html">Platform Overview</a></li>
+    <li><a href="/source/life-of-a-bug.html">Life of a Bug</a></li>
+    <li><a href="/faqs.html#aosp">FAQs</a></li>
+  </ul>
+
+  <li><h2>Getting Started</h2><ul>
+    <li><a href="/source/download.html">Getting the Source</a></li>
+    <li><a href="/source/git-repo.html">Using git and repo</a></li>
+    <li><a href="/source/using-eclipse.html">Using Eclipse</a></li>
+    <li><a href="/source/code-style.html">Code Style</a></li>
+    <li><a href="/source/building-dream.html">Building for an ADP</a></li>
+  </ul>
+
+  <li><h2>Contributing</h2><ul>
+    <li><a href="/source/life-of-a-patch.html">Life of a Patch</a></li>
+    <li><a href="/source/submit-patches.html">Submitting Patches</a></li>
+    <li><a href="/source/report-bugs.html">Reporting Bugs</a></li>
+    <li><a href="/source/code-lines.html">Branches &amp; Releases</a></li>
+  </ul>
+</ul>
+
+<script type="text/javascript">
+<!--
+    buildToggleLists();
+//-->
+</script>
+
+
+      </div>
+    </div> <!-- end side-nav -->
+    <script>
+      addLoadEvent(function() {
+        scrollIntoView("devdoc-nav");
+        });
+    </script>
+  </div>
+
+    
+  
+
+
+
+
+<div class="g-unit" id="doc-content"><a name="top"></a>
+
+<div id="jd-header" class="guide-header">
+  <span class="crumb" itemprop="breadcrumb">
+    &nbsp;
+    
+  </span>
+<h1 itemprop="name">Report Bugs</h1>
+</div>
+
+  <div id="jd-content">
+
+    <div class="jd-descr" itemprop="articleBody">
+    <div>
+<p>Thanks for your interest in Android! One of the best ways you can help us
+improve Android is to let us know about any problems you find with it.</p>
+<p>First, though: if you think you've found a security vulnerability,
+<b>please don't use the forms below</b>. (Using the public forms below may
+allow anyone to see your report, which may put users at risk until the bug is
+fixed.) Instead, please report security bugs to our security team by emailing
+<a href="mailto:security@android.com">security@android.com</a>.  We believe in
+responsible disclosure of security vulnerabilities, and will give you proper
+attribution for any issues you report.</p>
+<p>Here's how to report non-security bugs:</p>
+<ol>
+  <li><a href="http://code.google.com/p/android/issues/advsearch">Search for
+  your bug</a> to see if anyone has already reported it.</li>
+  <li>If you find your issue and it's important to you, star it! That's how we
+  know which bugs are most important to fix.</li>
+  <li>If no one's reported your bug, file the bug. You can use one of these
+  templates:<ul>
+    <li><a
+    href="http://code.google.com/p/android/issues/entry?template=User%20bug%20report">Bugs
+    in your Device (for users)</a> - use this if you want to report a bug in a
+    device you own</li>
+    <li><a
+    href="http://code.google.com/p/android/issues/entry?template=Developer%20bug%20report">Bugs
+    in the Software (for developers)</a> - use this if you found a bug in the
+    course of developing an app</li>
+    <li><a
+    href="http://code.google.com/p/android/issues/entry?template=Feature%20request">Request
+    a New Feature</a> - use this for a feature you'd like to see in a future
+    verison</li>
+  </ul></li>
+</ol>
+<p>Please note that we can't guarantee that any particular bug can be fixed in
+any particular release. To see what happens to your bug once you report it,
+read <a href="/source/life-of-a-bug.html">Life of a Bug</a>.</p>
+<p>In general, please put as much info in bugs as you can. Just a one liner
+telling us something isn't working is usually useless, and will probably be
+closed without any action. The more detail you provide, the more likely your
+issue is to be resolved. Below, there are some examples of a good bug report
+and a poor bug report.</p>
+<h3>A Poor Bug Report</h3>
+<pre>
+Title: Error message
+
+When running Eclipse I get an "Internal Error" that says "See the .log file
+for more details".
+
+Steps to reproduce:
+Happens when "Object o = null". Doesn't happen when changed to "Object o".
+
+Expected results:
+I wouldn't get the error message--would work with Object o = null.
+
+Observed results:
+See above.
+</pre>
+<p>This is a poor bug report because it doesn't provide any context for the
+issue; is it a problem in the Dalvik virtual machine, the core framework, or
+something else? It also doesn't provide any code or hint on how to reproduce
+it. In other words, this bug report doesn't provide enough information for
+anyone to take action on, so it would be ignored.</p>
+<h3>A Good Bug Report</h3>
+<pre>
+Title: Stepping over "Object o = null" causes Eclipse "Internal Error"
+
+Interesting bug, while using Eclipse 3.3.1.1 with m37a of android and
+the following code:
+
+package com.saville.android;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.util.Log;
+
+public class TestObjectNull extends Activity {
+    /** Called when the activity is first created. */
+    &#64;Override
+    public void onCreate(Bundle icicle) {
+        super.onCreate(icicle);
+        setContentView(R.layout.main);
+
+        Object o = null;
+
+        o = "hi";
+
+        Log.v(TAG, "o=" + o);
+    }
+
+    static final String TAG = "TestObjectNull";
+
+}
+
+Eclipse indicates an "Internal Error" with "See the .log file for more
+details" and then asks if I want to exit the workbench. This occurs when I
+place a break point on "setContentView(R.layout.main);" and then single
+step over "Object o = null;"
+
+If I change "Object o = null;" to "Object o" all is well.
+
+The last lines of the .log file are:
+
+!ENTRY org.eclipse.core.jobs 4 2 2008-01-01 13:04:15.825
+!MESSAGE An internal error occurred during: "has children update".
+!STACK 0
+java.lang.InternalError: Invalid signature: "&lt;null&gt;"
+        at
+org.eclipse.jdi.internal.TypeImpl.signatureToTag(TypeImpl.java:307)
+        at
+org.eclipse.jdi.internal.LocalVariableImpl.tag(LocalVariableImpl.java:185)
+        at
+org.eclipse.jdi.internal.StackFrameImpl.getValues(StackFrameImpl.java:128)
+        at
+org.eclipse.jdi.internal.StackFrameImpl.getValue(StackFrameImpl.java:73)
+        at
+org.eclipse.jdt.internal.debug.core.model.JDILocalVariable.retrieveValue(JDILocalVariable.java:57)
+        at
+org.eclipse.jdt.internal.debug.core.model.JDIVariable.getCurrentValue(JDIVariable.java:66)
+        at
+org.eclipse.jdt.internal.debug.core.model.JDIVariable.getValue(JDIVariable.java:88)
+        at
+org.eclipse.debug.internal.ui.model.elements.VariableContentProvider.hasChildren(VariableContentProvider.java:62)
+        at
+org.eclipse.jdt.internal.debug.ui.variables.JavaVariableContentProvider.hasChildren(JavaVariableContentProvider.java:73)
+        at
+org.eclipse.debug.internal.ui.model.elements.ElementContentProvider.updateHasChildren(ElementContentProvider.java:223)
+        at
+org.eclipse.debug.internal.ui.model.elements.ElementContentProvider$3.run(ElementContentProvider.java:200)
+        at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+</pre>
+</div>
+
+    </div>
+
+  <a href="#top" style="float:right">&uarr; Go to top</a>
+  
+  </div>
+
+<div id="footer">
+
+
+  <div id="copyright">
+    
+
+  </div>
+
+  <div id="footerlinks">
+    
+  <p>
+    <a href="http://www.android.com/terms.html">Site Terms of Service</a> -
+    <a href="http://www.android.com/privacy.html">Privacy Policy</a>
+  </p>
+  </div>
+
+</div> <!-- end footer -->
+
+</div><!-- end doc-content -->
+
+</div> <!-- end body-content --> 
+
+<script type="text/javascript">
+init(); /* initialize android-developer-docs.js */
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-5831155-1");
+pageTracker._trackPageview();
+</script>
+
+</body>
+</html>
+
+
+

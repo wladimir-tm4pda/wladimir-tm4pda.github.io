@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico" />
+<title>Compatibility Program Overview | Android Open Source</title>
+<link href="/assets/android-developer-docs-devguide.css" rel="stylesheet" type="text/css" />
+<!-- <link href="/assets-pdk/pdk-local.css" rel="stylesheet" type="text/css" /> -->
+<script src="/assets/search_autocomplete.js" type="text/javascript"></script>
+<script src="/assets/jquery-resizable.min.js" type="text/javascript"></script>
+<script src="/assets/android-developer-docs.js" type="text/javascript"></script>
+<script type="text/javascript">
+  setToRoot("/");
+</script>
+<script type="text/javascript">
+  function resizeDoxFrameHeight() {
+	if(document.getElementById && !(document.all)) {
+		height= document.getElementById('doxygen').contentDocument.body.scrollHeight + 20;
+		document.getElementById('doxygen').style.height = height+"pt";
+	}
+	else if(document.all) {
+		height= document.frames('doxygen').document.body.scrollHeight + 20;
+		document.all.doxygen.style.height = height;
+	}
+}
+</script>
+<script type="text/javascript">
+  jQuery(document).ready(function() {
+        jQuery("pre").addClass("prettyprint");
+  });
+</script>
+<noscript>
+  <style type="text/css">
+    body{overflow:auto;}
+    #body-content{position:relative; top:0;}
+    #doc-content{overflow:visible;border-left:3px solid #666;}
+    #side-nav{padding:0;}
+    #side-nav .toggle-list ul {display:block;}
+    #resize-packages-nav{border-bottom:3px solid #666;}
+  </style>
+</noscript>
+</head>
+
+<body class="gc-documentation" itemscope itemtype="http://schema.org/Article">
+
+  <div id="header">
+      <div id="headerLeft">
+          <a href="/" tabindex="-1"><img
+              src="/assets/images/open_source.png" alt="Android Open Source Project" /></a>
+          <ul class="compatibility">
+              <li id="home-link"><a href="/index.html"><span>Home</span></a></li>
+              <li id="source-link"><a href="/source/index.html"
+                                  onClick="return loadLast('source')"><span>Source</span></a></li>
+              <li id="porting-link"><a href="/porting/index.html"
+                                  onClick="return loadLast('porting')"><span>Porting</span></a></li>
+              <li id="compatibility-link"><a href="/compatibility/index.html"
+                                  onClick="return loadLast('compatibility')"><span>Compatibility</span></a></li>
+              <li id="community-link"><a href="/community/index.html"
+                                  onClick="return loadLast('community')"><span>Community</span></a></li>
+              <li id="about-link"><a href="/about/index.html"
+                                  onClick="return loadLast('about')"><span>About</span></a></li>
+          </ul> 
+      </div>
+      <div id="headerRight">
+          <div id="headerLinks">
+            <!-- <img src="/assets/images/icon_world.jpg" alt="" /> -->
+            <span class="text">
+              <!-- &nbsp;<a href="#">English</a> | -->
+              <a href="http://www.android.com">Android.com</a>
+            </span>
+          </div>
+      </div><!-- headerRight -->
+  </div><!-- header -->
+
+  
+    
+      
+  <div class="g-section g-tpl-240" id="body-content">
+    <div class="g-unit g-first side-nav-resizable" id="side-nav">
+      <div id="devdoc-nav"><script type="text/javascript" language="JavaScript">
+<!--
+function nothing() {}
+-->
+</script>
+
+<ul>
+  <li><h2>Getting Started</h2><ul>
+    <li><a href="/compatibility/overview.html">Compatibility Overview</a></li>
+    <li><a href="/compatibility/android-2.3.3-cdd.pdf">Current CDD</a></li>
+    <li><a href="/compatibility/cts-intro.html">CTS Introduction</a></li>
+    <li><a href="/compatibility/cts-development.html">CTS Development</a></li>
+  </ul></li>
+
+  <li><h2>More Information</h2><ul>
+    <li><a href="/compatibility/downloads.html">Downloads</a></li>
+    <li><a href="/faqs.html#compatibility">FAQs</a></li>
+    <li><a href="/compatibility/contact-us.html">Contact Us</a></li>
+  </ul></li>
+</ul>
+
+<script type="text/javascript">
+<!--
+    buildToggleLists();
+//-->
+</script>
+
+      </div>
+    </div> <!-- end side-nav -->
+    <script>
+      addLoadEvent(function() {
+        scrollIntoView("devdoc-nav");
+        });
+    </script>
+  </div>
+
+    
+  
+
+
+
+
+<div class="g-unit" id="doc-content"><a name="top"></a>
+
+<div id="jd-header" class="guide-header">
+  <span class="crumb" itemprop="breadcrumb">
+    &nbsp;
+    
+  </span>
+<h1 itemprop="name">Compatibility Program Overview</h1>
+</div>
+
+  <div id="jd-content">
+
+    <div class="jd-descr" itemprop="articleBody">
+    <p>The Android compatibility program makes it easy for mobile device
+manufacturers to develop compatible Android devices.</p>
+<h3>Program goals</h3>
+<p>The Android compatibility program works for the benefit of the entire
+Android community, including users, developers, and device manufacturers.</p>
+<p>Each group depends on the others. Users want a wide selection of devices
+and great apps; great apps come from developers motivated by a large market
+for their apps with many devices in users' hands; device manufacturers rely
+on a wide variety of great apps to increase their products' value for
+consumers.</p>
+<p>Our goals were designed to benefit each of these groups:</p>
+<ul>
+<li><b>Provide a consistent application and hardware environment to application
+developers.</b><p>Without a strong compatibility standard, devices can vary so
+greatly that developers must design different versions of their applications
+for different devices. The compatibility program provides a precise definition
+of what developers can expect from a compatible device in terms of APIs and
+capabilities. Developers can use this information to make good design
+decisions, and be confident that their apps will run well on any compatible
+device.</p></li>
+<li><b>Enable a consistent application experience for consumers.</b><p>If an
+application runs well on one compatible Android device, it should run well on
+any other device that is compatible with the same Android platform version.
+Android devices will differ in hardware and software capabilities, so the
+compatibility program also provides the tools needed for distribution systems
+such as Android Market to implement appropriate filtering. This means that
+users can only see applications which they can actually run.</p></li>
+<li><b>Enable device manufacturers to differentiate while being
+compatible.</b><p>The Android compatibility program focuses on the aspects of
+Android relevant to running third-party applications, which allows device
+manufacturers the flexibility to create unique devices that are nonetheless
+compatible.</p></li>
+<li><b>Minimize costs and overhead associated with
+compatibility.</b><p>Ensuring compatibility should be easy and inexpensive to
+device manufacturers. The testing tool (CTS) is free, open source, and
+available for <a href="/compatibility/downloads.html">download</a>. 
+CTS is designed to be used for continuous self-testing
+during the device development process to eliminate the cost of changing your
+workflow or sending your device to a third party for testing. Meanwhile, there
+are no required certifications, and thus no corresponding costs and
+fees.</p></li>
+</ul>
+<p>The Android compatibility program consists of three key components:</p>
+<ul>
+<li>The source code to the Android software stack</li>
+<li>The Compatilbility Definition Document, representing the "policy"
+aspect of compatibility</li>
+<li>The Compatilbility Test Suite, representing the "mechanism" of compatibility</li>
+</ul>
+<p>Just as each version of the Android platform exists in a separate branch in
+the source code tree, there is a separate CTS and CDD for each version as
+well. The CDD, CTS, and source code are -- along with your hardware and your
+software customizations -- everything you need to create a compatible device.</p>
+
+<h3>Compatibility Definition Document (CDD)</h3>
+<p>For each release of the Android platform, a detailed Compatibility
+Definition Document (CDD) will be provided. The CDD represents the "policy"
+aspect of Android compatibility.</p>
+<p>No test suite, including CTS, can truly be comprehensive. For instance, the
+CTS includes a test that checks for the presence and correct behavior of
+OpenGL graphics APIs, but no software test can verify that the graphics
+actually appear correctly on the screen. More generally, it's impossible to
+test the presence of hardware features such as keyboards, display density,
+WiFi, and Bluetooth.</p>
+<p>The CDD's role is to codify and clarify specific requirements, and
+eliminate ambiguity.  The CDD does not attempt to be comprehensive. Since
+Android is a single corpus of open-source code, the code itself is the
+comprehensive "specification" of the platform and its APIs. The CDD acts as a
+"hub", referencing other content (such as SDK API documentation) that provides
+a framework in which the Android source code may be used so that the end
+result is a compatible system.</p>
+<p>If you want to build a device compatible with a given Android version,
+start by checking out the source code for that version, and then read the
+corresponding CDD and stay within its guidelines. For additional details,
+simply examine <a href="">the latest CDD</a>.</p>
+
+<h3>Compatibility Test Suite (CTS)</h3>
+<p>The CTS is a free, commercial-grade test suite, available for
+<a href="/compatibility/downloads.html">download</a>.
+The CTS represents the "mechanism" of compatibility.</p>
+<p>The CTS runs on a desktop machine and executes test cases directly on
+attached devices or an emulator. The CTS is a set of unit tests designed to be
+integrated into the daily workflow (such as via a continuous build system) of
+the engineers building a device. Its intent is to reveal incompatibilities
+early on, and ensure that the software remains compatible throughout the
+development process.</p>
+<p>For details on the CTS, consult the <a
+href="/compatibility/cts-intro.html">CTS introduction</a>.</p>
+
+    </div>
+
+  <a href="#top" style="float:right">&uarr; Go to top</a>
+  
+  </div>
+
+<div id="footer">
+
+
+  <div id="copyright">
+    
+
+  </div>
+
+  <div id="footerlinks">
+    
+  <p>
+    <a href="http://www.android.com/terms.html">Site Terms of Service</a> -
+    <a href="http://www.android.com/privacy.html">Privacy Policy</a>
+  </p>
+  </div>
+
+</div> <!-- end footer -->
+
+</div><!-- end doc-content -->
+
+</div> <!-- end body-content --> 
+
+<script type="text/javascript">
+init(); /* initialize android-developer-docs.js */
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-5831155-1");
+pageTracker._trackPageview();
+</script>
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico" />
+<title>Sensors | Android Open Source</title>
+<link href="/assets/android-developer-docs-devguide.css" rel="stylesheet" type="text/css" />
+<!-- <link href="/assets-pdk/pdk-local.css" rel="stylesheet" type="text/css" /> -->
+<script src="/assets/search_autocomplete.js" type="text/javascript"></script>
+<script src="/assets/jquery-resizable.min.js" type="text/javascript"></script>
+<script src="/assets/android-developer-docs.js" type="text/javascript"></script>
+<script type="text/javascript">
+  setToRoot("/");
+</script>
+<script type="text/javascript">
+  function resizeDoxFrameHeight() {
+	if(document.getElementById && !(document.all)) {
+		height= document.getElementById('doxygen').contentDocument.body.scrollHeight + 20;
+		document.getElementById('doxygen').style.height = height+"pt";
+	}
+	else if(document.all) {
+		height= document.frames('doxygen').document.body.scrollHeight + 20;
+		document.all.doxygen.style.height = height;
+	}
+}
+</script>
+<script type="text/javascript">
+  jQuery(document).ready(function() {
+        jQuery("pre").addClass("prettyprint");
+  });
+</script>
+<noscript>
+  <style type="text/css">
+    body{overflow:auto;}
+    #body-content{position:relative; top:0;}
+    #doc-content{overflow:visible;border-left:3px solid #666;}
+    #side-nav{padding:0;}
+    #side-nav .toggle-list ul {display:block;}
+    #resize-packages-nav{border-bottom:3px solid #666;}
+  </style>
+</noscript>
+</head>
+
+<body class="gc-documentation" itemscope itemtype="http://schema.org/Article">
+
+  <div id="header">
+      <div id="headerLeft">
+          <a href="/" tabindex="-1"><img
+              src="/assets/images/open_source.png" alt="Android Open Source Project" /></a>
+          <ul class="porting">
+              <li id="home-link"><a href="/index.html"><span>Home</span></a></li>
+              <li id="source-link"><a href="/source/index.html"
+                                  onClick="return loadLast('source')"><span>Source</span></a></li>
+              <li id="porting-link"><a href="/porting/index.html"
+                                  onClick="return loadLast('porting')"><span>Porting</span></a></li>
+              <li id="compatibility-link"><a href="/compatibility/index.html"
+                                  onClick="return loadLast('compatibility')"><span>Compatibility</span></a></li>
+              <li id="community-link"><a href="/community/index.html"
+                                  onClick="return loadLast('community')"><span>Community</span></a></li>
+              <li id="about-link"><a href="/about/index.html"
+                                  onClick="return loadLast('about')"><span>About</span></a></li>
+          </ul> 
+      </div>
+      <div id="headerRight">
+          <div id="headerLinks">
+            <!-- <img src="/assets/images/icon_world.jpg" alt="" /> -->
+            <span class="text">
+              <!-- &nbsp;<a href="#">English</a> | -->
+              <a href="http://www.android.com">Android.com</a>
+            </span>
+          </div>
+      </div><!-- headerRight -->
+  </div><!-- header -->
+
+  
+    
+      
+  <div class="g-section g-tpl-240" id="body-content">
+    <div class="g-unit g-first side-nav-resizable" id="side-nav">
+      <div id="devdoc-nav"><script type="text/javascript" language="JavaScript">
+<!--
+function nothing() {}
+-->
+</script>
+
+<ul>
+
+<li> <h2>Setup and Building</h2>
+  <ul>
+     <li class="toggle-list">
+     <div><a href="/porting/build_system.html">Build System</a></div>
+     <ul>  
+       <li><a href="/porting/build_new_device.html">Configuring a New Product</a></li>
+       <li><a href="/porting/build_cookbook.html">Build Cookbook</a></li>
+     </ul>
+     </li>
+     <li><a href="/porting/release_keys.html">Release Keys and Signing Builds</a></li> 
+ </ul>
+</li>
+
+<li> <h2>Customization</h2>
+  <ul>
+    <li><a href="/porting/customization.html">Customization</a></li>
+    <li><a href="/porting/usersguide.html">Android User's Guide</a></li>
+  </ul>
+</li>
+
+<li> <h2>System</h2>
+
+<ul>
+  <li><a href="/porting/bring_up.html">Bring up</a></li>
+  <li class="toggle-list">
+    <div><a href="javascript:nothing()">Connectivity</a></div>
+    <ul> 
+      <li><a href="/porting/bluetooth.html">Bluetooth</a></li>
+      <li><a href="/porting/gps.html">GPS</a></li>
+      <li><a href="/porting/wifi.html">Wi-Fi</a></li>
+    </ul>
+  </li>
+
+  <li><a href="/porting/display_drivers.html">Display Drivers</a></li>
+  <li class="toggle-list"> 
+    <div><a href="javascript:nothing()">Input Devices</a></div>
+    <ul>
+      <li><a href="/porting/keymaps_keyboard_input.html">Keymaps and Keyboard</a></li>
+    </ul>
+  </li>
+  <li><a href="/porting/lights.html">Lights</a></li>
+  <li class="toggle-list">
+    <div><a href="javascript:nothing()">Multimedia</a></div>
+    <ul>
+      <li><a href="/porting/audio.html">Audio</a></li>
+      <li><a href="/porting/camera.html">Camera/Video</a></li>
+    </ul>
+  </li>
+  
+  <li><a href="/porting/power_management.html">Power Management</a></li>
+  <li><a href="/porting/sensors.html">Sensors</a></li>
+  <li class="toggle-list">
+    <div><a href="javascript:nothing()">Telephony</a></div>
+    <ul>
+      <li><a href="/porting/telephony.html">Radio Interface Layer</a></li>
+      <li><a href="/porting/stk.html">SIM Toolkit Application (STK)</a></li>
+    </ul>
+  </li>
+
+</ul>
+</li>
+
+<li> <h2>Dalvik Virtual Machine</h2>
+  <ul>
+    <li><a href="/porting/dalvik.html">Porting Dalvik</a></li>
+  </ul>
+</li>
+<li> <h2>Testing and Debugging</h2>
+  <ul>
+    <li><a href="/porting/instrumentation_testing.html">Instrumentation Testing</a></li>
+    <li><a href="/porting/debugging_gdb.html">Debugging with GDB</a></li>
+    <li><a href="/porting/debugging_native.html">Debugging Native Code</a></li>
+    <li><a href="/porting/tcpdump.html">Debugging with tcpdump</a></li>
+  </ul>
+</li>
+
+
+
+</ul>
+
+<script type="text/javascript">
+<!--
+    buildToggleLists();
+//-->
+</script>
+
+      </div>
+    </div> <!-- end side-nav -->
+    <script>
+      addLoadEvent(function() {
+        scrollIntoView("devdoc-nav");
+        });
+    </script>
+  </div>
+
+    
+  
+
+
+
+
+<div class="g-unit" id="doc-content"><a name="top"></a>
+
+<div id="jd-header" class="guide-header">
+  <span class="crumb" itemprop="breadcrumb">
+    &nbsp;
+    
+  </span>
+<h1 itemprop="name">Sensors</h1>
+</div>
+
+  <div id="jd-content">
+
+    <div class="jd-descr" itemprop="articleBody">
+    <div id="qv-wrapper">
+<div id="qv">
+<h2>In this document</h2>
+<a name="toc"/>
+<ul>
+<li><a href="#androidSensorsInterface">Interface</a></li>
+</ul>
+</div>
+</div>
+
+<p>Android defines a user space C abstraction interface for sensor hardware. The interface header is defined in 
+<code>hardware/libhardware/include/hardware/sensors.h</code>.
+In order to integrate sensors with Android you need to build a shared library that implements this interface. 
+
+The types of sensors currently supported by Android include:
+<ul>
+<li>Accelerometer</li>
+<li>Magnetic Field</li>
+<li>Orientation</li>
+<li>Gyroscope</li>
+<li>Light</li>
+<li>Pressure</li>
+<li>Temperature</li>
+<li>Proximity</li>
+</ul>
+</p> 
+ 
+<a name="androidSensorBuildingDriver"></a><h3>Building a Sensor Library</h3>
+<p> To implement a Sensors driver, create a shared library that implements the interface defined in <code>sensors.h</code>. You must name your shared library 
+<code>libsensors.so</code> so that it will get loaded from <code>/system/lib</code> at runtime. 
+</p>
+
+<p> The following stub file, <code>Android.mk</code>, ensures that <code>libsensors</code> compiles and links to the appropriate libraries:</p>
+
+<pre>
+LOCAL_PATH := $(call my-dir)
+include $(CLEAR_VARS)
+
+LOCAL_MODULE := sensors
+
+LOCAL_PRELINK_MODULE := false
+
+LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)/hw
+
+LOCAL_SHARED_LIBRARIES := liblog
+# include any shared library dependencies
+
+LOCAL_SRC_FILES := sensors.c
+
+include $(BUILD_SHARED_LIBRARY)
+</pre>
+ 
+<a name="androidSensorsInterface"></a><h3>Interface</h3> 
+ 
+ 
+<p><span class="lh3"><a name="androidDoxygenNote"></a></span> 
+ 
+<p class="note"><strong>Note</strong>: This document relies on some Doxygen-generated content that appears in an iFrame below. To return to the Doxygen default content for this page, <a href="sensors.html">click here</a>.</p> 
+ 
+ 
+<iframe onLoad="resizeDoxFrameHeight();" src="sensors_8h.html" scrolling="no" scroll="no" id="doxygen" marginwidth="0" marginheight="0" 
+frameborder="0" style="width:100%;"></iframe> 
+
+    </div>
+
+  <a href="#top" style="float:right">&uarr; Go to top</a>
+  
+  </div>
+
+<div id="footer">
+
+
+  <div id="copyright">
+    
+
+  </div>
+
+  <div id="footerlinks">
+    
+  <p>
+    <a href="http://www.android.com/terms.html">Site Terms of Service</a> -
+    <a href="http://www.android.com/privacy.html">Privacy Policy</a>
+  </p>
+  </div>
+
+</div> <!-- end footer -->
+
+</div><!-- end doc-content -->
+
+</div> <!-- end body-content --> 
+
+<script type="text/javascript">
+init(); /* initialize android-developer-docs.js */
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-5831155-1");
+pageTracker._trackPageview();
+</script>
+
+</body>
+</html>
+
+
+
